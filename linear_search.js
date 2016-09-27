@@ -20,13 +20,21 @@ console.log(linearSearch(18, random_numbers));
 console.log(linearSearch(9, random_numbers));
 // -1
 
-// // Release 1
-// console.log("Global Linear Search")
-// let globalLinearSearch = (target, values) => {
-//   //write your code here
-// }
-//
-// let banana_arr = "banana".split("");
-// // ["b", "a", "n", "a", "n", "a"]
-// console.log(globalLinearSearch("a", banana_arr));
-// // [ 1, 3, 5 ]
+// Release 1
+console.log("Global Linear Search")
+let globalLinearSearch = (target, values) => {
+  //write your code here
+  var temp = [];
+  for (var j = 0; j <= values.length; j++) {
+    if (target === values[j]) {
+      temp.push(j);
+    } else if (j === values.length) {
+      return temp
+    }
+  }
+}
+
+let banana_arr = "banana".split("");
+// ["b", "a", "n", "a", "n", "a"]
+console.log(globalLinearSearch("a", banana_arr));
+// [ 1, 3, 5 ]
